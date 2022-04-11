@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./scripts/script.js" defer></script>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Boson: Bringing something to somewhere</title>
+</head>
+<body>
+    <main id="sign-up-window">
+        <section id="display-area">
+            <h1 id="logo">BOSON</h1>
+            <p id="caption">Photo by <a href="https://unsplash.com/@alexandersafronov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alex Safronov</a> on <a href="https://unsplash.com/@alexandersafronov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+        </section>
+        <section id="content-area">
+            <section id="message">
+                <p>This is not a <em>real</em> online service! Seasons moveth there thing set place, given bring said moving fill creature bearing were to third dry upon whose our Beast every.</p>
+                <p>Man signs air our, it were. <strong>RULE THIRD</strong>.</p>
+            </section>
+            <section id="form-container">
+                <form action="/" method="post" id="user-form" autocomplete="off">
+                    <h3>Let's get started.</h3>
+                    <p id="mandatory-notice">Fields marked with <abbr title="mandatory">*</abbr> are mandatory</p>
+                    <p id="password-notice">Passwords must be 8-32 characters, and contain at least 1 number and 1 uppercase letter.</p>
+                    <div id="input-container">
+                        <div class="input-box">
+                            <input type="text" pattern ="[a-zA-Z]+" name="first-name" id="first-name" minlength="1" maxlength="32" title="Letters only" placeholder=" " required>
+                            <label for="first-name" class="inner-label">First name<abbr title="mandatory">*</abbr></label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" pattern ="[a-zA-Z]+" name="last-name" id="last-name" maxlength="32" title="Letters only" placeholder=" ">
+                            <label for="last-name" class="inner-label">Last name</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" name="email-address" id="email-address" required title="eg. yourname@email-address.com.." placeholder=" ">
+                            <label for="email-address" class="inner-label">Email address<abbr title="mandatory">*</abbr></label>
+                        </div>
+                        <div class="input-box">
+                            <input type="tel" pattern="[0-9]{4}( |-)?[0-9]{3}( |-)?[0-9]{3}" name="phone-number" id="phone-number" title="e.g. 0412 345 678.." placeholder=" ">
+                            <label for="phone-number" class="inner-label">Phone number</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="password" id="password" title="Must be at least 8 characters, and contain at least one uppercase character, as well as at least one number." pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" minlength="8" maxlength="32" placeholder=" " required>
+                            <label for="password" class="inner-label">Password<abbr title="mandatory">*</abbr></label>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="password-confirm" id="password-confirm" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" minlength="8" maxlength="32" placeholder=" " required>
+                            <label for="password-confirm" class="inner-label">Confirm your password<abbr title="mandatory">*</abbr></label>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section id="confirmation">
+                <div class="submit-section">
+                    <button type="submit" form="user-form">Create account</button>
+                    <p id="have-account">Already have an account with us? <a href="#">Sign in.</a></p>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
