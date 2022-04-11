@@ -43,7 +43,7 @@ password.addEventListener('input', () => {
 })
 
 password.addEventListener('focusout', e => {
-    if(passwordNotice.textContent[0] != 'P') {
+    if(passwordNotice.textContent != 'Passwords do not match') {
         passwordNotice.style.visibility = 'hidden';
     }; 
 });
